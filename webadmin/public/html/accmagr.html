@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>OpenPUSH 帐户管理</title>
+	
+	<!-- Bootstrap -->
+	<link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	<!-- 修复IE10(win8)的viewport问题 -->
+	<link href="/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	
+	<link href="/stylesheets/main.css" rel="stylesheet">
+	
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	  <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="#">OpenPUSH</a>
+		</div><!-- /.navbar-header -->
+		<div id="navbar" class="navbar-collapse collapse">
+		  <ul class="nav navbar-nav">
+		    <li class="active"><a href="accmagr.html">帐户管理</a></li>
+		    <li><a href="pushmsg.html">推送消息</a></li>
+		  </ul>
+		</div><!--/#navbar -->
+	</div>
+	</nav>
+
+
+	<div class="container">
+	<div>
+		<button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#accAdd">
+			添加新帐户
+		</button>
+		<button class="col-sm-offset-1 btn btn-default btn-sm" data-toggle="modal" data-target="#accDel">
+			删除指定帐户
+		</button>
+	</div>
+
+	<table class="table table-hover">
+		<caption></caption>
+		<thead>
+			<tr>
+				<th class="col-sm-3">帐户名称</th>
+				<th class="col-sm-9">订阅权限</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>001</td>
+				<td>#</td>
+			</tr>
+			<tr>
+				<td>002</td>
+				<td>#</td>
+			</tr>
+			<tr>
+				<td>000</td>
+				<td>presence</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+
+	</div><!-- /.container -->
+
+
+	<!-- 对话框：添加新帐户
+	================================================== -->
+	<div class="modal fade" id="accAdd" tabindex="-1" role="dialog" 
+	   aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<!-- 对话框标题 -->
+					<h4 class="modal-title" id="myModalLabel">添加新帐户</h4>
+				</div>
+				<!-- 对话框内容 -->
+				<div class="modal-body">
+				 	在此添加新帐户
+				</div>
+				<!-- 对话框按钮 -->
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary">添加</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+	<!-- 对话框：删除指定新帐户
+	================================================== -->
+	<div class="modal fade" id="accDel" tabindex="-1" role="dialog" 
+	   aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<!-- 对话框标题 -->
+					<h4 class="modal-title" id="myModalLabel">删除指定帐户</h4>
+				</div>
+				<!-- 对话框内容 -->
+				<div class="modal-body">
+				 	在此指定删除帐户
+				</div>
+				<!-- 对话框按钮 -->
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-warning">删除</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
+
+
+
+
+	<!-- Bootstrap
+	================================================== -->
+	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<!-- 修复IE10(win8)的viewport问题 -->
+	<script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
+

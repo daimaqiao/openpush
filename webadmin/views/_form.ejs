@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+	<form method="post" action="" enctype="application/x-www-form-urlencoded">
+		<% for(var i=0; i<inputFields.length; i++) { var input= inputFields[i]; %>
+		<%= input.text %><input type="<%= input.type %>" name="<%= input.name %>"/><br/>
+		<% } %>
+		<input type="submit"/>
+	</form>
+</html>

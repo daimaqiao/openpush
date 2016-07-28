@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="accmagrApp">
+<head>
+	<title><%= title %></title>
+	<%- include("frag/head.ejs"); %>
+	<link href="/stylesheets/home.css" rel="stylesheet">
+</head>
+
+<body>
+	<%- include("frag/nav.ejs"); %>
+
+	<div class="container" ng-controller="accmagrController">
+		<div class="form-horizontal" role="form">
+			<div class="form-group">
+				<label for="username" class="col-sm-2 control-label">帐户名称</label>
+				<div class="col-sm-6">
+					<input type="text" class="form-control" id="username" placeholder="帐户名称"
+						ng-model="username">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="password" class="col-sm-2 control-label">帐户密码</label>
+				<div class="col-sm-6">
+					<input type="password" class="form-control" id="password" placeholder="帐户密码"
+						ng-model="password">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="topics" class="col-sm-2 control-label">订阅权限</label>
+				<div class="col-sm-6">
+					<input type="topics" class="form-control" id="topics" placeholder="订阅权限"
+						ng-model="topics">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-6 col-sm-2">
+					<button type="submit" class="btn btn-primary btn-sm"
+						ng-click="save()">添加新帐户</button>
+				</div>
+			</div>
+		</div><!-- role:form -->
+
+		<table class="table table-hover">
+			<caption></caption>
+			<thead>
+				<tr>
+					<th class="col-sm-3">帐户名称</th>
+					<th class="col-sm-7">订阅权限</th>
+					<th class="col-sm-2">订阅权限</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="user in userlist">
+					<td>{{user.username}}</td>
+					<td>{{user.topics}}</td>
+					<td>
+						<a href="#" ng-click="delete(user)">delete</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div><!-- /.container -->
+
+	<%- include("frag/tail.ejs"); %>
+	<script src="/javascripts/accmagr.js"></script>
+</body>
+</html>
+

@@ -4,6 +4,7 @@
 
 var express = require("express");
 var router = express.Router();
+var accmagr= require("../controllers/accmagr");
 var authmgr= require("../native/authmgr");
 
 function gotoLogin(req, res) {
